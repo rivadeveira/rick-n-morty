@@ -12,7 +12,7 @@ export default function router(route) {
         case "#/personajes":
             return initCharacters();
         default: {
-            history.pushState(null, "", "/#/personajes");
+            history.pushState(null, "", "/#/episodios");
             return initEpisodes();
         }
     }
