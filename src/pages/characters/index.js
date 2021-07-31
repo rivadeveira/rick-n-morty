@@ -31,7 +31,10 @@ function renderCharacters(listData, container) {
                 <img class="character__photo" src="${item.image}" alt="${item.species} ${item.gender}" />
                 <figcaption class="character__name">${item.name}<figcaption>
             </figure>
-            <span class="character__status character__status--${item.status === 'Alive' ? 'alive' : 'dead'}" title="${item.status}"></span>
+            <p class="character__status-text">
+                <span data-status="${item.status}" class="character__status character__status--${item.status === 'Alive' ? 'alive' : item.status === 'Dead' ? 'dead' : ''}" title="${item.status}"></span>
+                ${item.status}
+            </p>
         </li>`;
     })
 }

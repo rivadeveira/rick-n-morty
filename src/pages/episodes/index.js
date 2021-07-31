@@ -31,8 +31,10 @@ function renderEpisodes(listData, container) {
     container.querySelector("#message-empty").classList = "hide";
     return listData.map(item => {
         return `<li class="episode__item">
-            <p class="episode__name">${item.name}</p>
-            <time class="episode__time" datetime="${new Date(item.air_date)}">${item.air_date}</time>
+            <div class="episode__info">
+                <p class="episode__name">${item.name}</p>
+                <time class="episode__time" datetime="${new Date(item.air_date)}">${item.air_date}</time>
+            </div>
             <button data-ep="${item.id}" class="episode__cta">Ver personajes</button>
         </li>`;
     })
@@ -51,7 +53,10 @@ function renderEpisodeCharacters(data) {
                 <img class="character__photo" src="${item.image}" alt="${item.species} ${item.gender}" />
                 <figcaption class="character__name">${item.name}<figcaption>
             </figure>
-            <span class="character__status character__status--${item.status === 'Alive' ? 'alive' : 'dead'}" title="${item.status}"></span>
+            <p class="character__status-text">
+                <span data-status="${item.status}" class="character__status character__status--${item.status === 'Alive' ? 'alive' : item.status === 'Dead' ? 'dead' : ''}" title="${item.status}"></span>
+                ${item.status}
+            </p>
         </li>`;
     });
 }

@@ -4,6 +4,9 @@
   "description": "",
   "main": "./src/app.js",
   "scripts": {
+    "start": "npx webpack serve",
+    "build": "npx webpack",
+    "devbuild": "webpack --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
