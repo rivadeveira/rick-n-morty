@@ -6,14 +6,14 @@ export default function router(route) {
     removeAllChildNodes(containerPage);
     switch(route) {
         case "#":
-            return initCharacters();
+            return initEpisodes();
         case "#/episodios":
             return initEpisodes();
         case "#/personajes":
             return initCharacters();
         default: {
             history.pushState(null, "", "/#/personajes");
-            return initCharacters();
+            return initEpisodes();
         }
     }
 }
