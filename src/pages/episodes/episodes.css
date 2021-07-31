@@ -1,0 +1,22 @@
+.episodes__list {
+    max-height: calc(100vh - 150px);
+    overflow: auto;
+}
+.hide {
+    display: none;
+}
+.episodes__characters {
+    display: none;
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    transition: transform ease-in-out .5s;
+}
+.episodes__characters.episodes__characters--show {
+    display: block;
+    transform: scale(1);
+}

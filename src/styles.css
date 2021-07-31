@@ -1,0 +1,4 @@
+.nav__link.nav__link--active {
+    color: green;
+    font-weight: 500;
+}
