@@ -24,7 +24,6 @@ export async function getCharacters(criteria = "", onScroll = false) {
         })
         .catch(err => {
             setResponseData(null);
-            console.log('testt err', err)
             return [];
         })
 }

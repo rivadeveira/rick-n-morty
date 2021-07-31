@@ -64,10 +64,8 @@ function renderEpisodeCharacters(data) {
 /** EVENTS **/
 
 async function viewCharacters(event) {
-    console.log(event.target, event)
     const {ep: epId} = event.target.dataset;
     const charactersData = await getEpisodeCharacters(+epId);
-    console.log('test e', charactersData)
     let dialogContainer = containerPage.querySelector("#episode-characters");
     let listContainer = containerPage.querySelector("#episode-characters-list");
     const listCompose = renderEpisodeCharacters(charactersData).join("");
